@@ -1,8 +1,8 @@
-import commandGetSheet from "./commands/getSheet.js"
-import 'dotenv/config'
+import getSheet from './scripts/getSheet.js'
+import 'dotenv/config';
 
 (async () => {
-    const sheetResult = await commandGetSheet(
+    const sheetResult = await getSheet(
         process.env.DOC_ID,
         process.env.SHEET_ID
     )

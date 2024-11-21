@@ -1,0 +1,8 @@
+{
+    "extends": ["standard"],
+    "rules": {
+        "indent": ["error", 4],
+        "semi": ["error", "never"], // 禁用一般分號
+        "no-unexpected-multiline": "error" // 防止 IIFE 前的意外換行 // 將縮排改為 4 格
+    }
+}
