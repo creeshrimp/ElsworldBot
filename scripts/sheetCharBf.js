@@ -11,24 +11,23 @@ async function searchBuff (characterName) {
         const rows = await sheetCharBf.getRows()
 
         // 角色搜尋
-        // const characters = []
-        // for (const row of rows) {
-        //     // if (row._rawData[0]) characters.push(row._rawData[0])
-        //     if (row._rawData[0] && row._rawData[0] === characterName) {
-        //         console.log(row)
-        //     }
-        // }
-        rows.forEach((row, i) => {
-            console.log(row)
-        })
+        const characters = []
+        for (const row of rows) {
+            // if (row._rawData[0]) characters.push(row._rawData[0])
+            if (row._rawData[0] && row._rawData[0] === characterName) {
+                console.log(row)
+            }
+        }
+        // rows.forEach((row, i) => {
+        //     console.log(row)
+        // })
 
         // // 角色搜尋
-        // if (characters.includes(characterName)) {
-        //     console.log(`顯示 ${characterName} 角色BUFF`)
-
-        // } else {
-        //     console.log('沒有這個角色')
-        // }
+        if (characters.includes(characterName)) {
+            console.log(`顯示 ${characterName} 角色BUFF`)
+        } else {
+            console.log('沒有這個角色')
+        }
     } catch (error) {
         console.log(error)
     }
