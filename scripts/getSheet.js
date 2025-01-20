@@ -11,7 +11,7 @@ export default async (docID, sheetID) => {
 
             // 私鑰必須將\n替換為真正的換行符號
             key: process.env.GOOGLE_PRIVATE_KEY.split(String.raw`\n`).join('\n'),
-            scopes: ['https://www.googleapis.com/auth/spreadsheets']
+            scopes: ['https://www.googleapis.com/auth/spreadsheets'],
         })
 
         const doc = new GoogleSpreadsheet(docID, serviceAccountAuth)

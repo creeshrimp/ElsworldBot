@@ -1,7 +1,7 @@
 import getSheet from './getSheet.js'
 import { config } from '../config/config.js'
 
-async function searchBuff (characterName) {
+async function searchBuff(characterName) {
     try {
         // 參數處理 去空白
         characterName = characterName.trim()
@@ -12,10 +12,10 @@ async function searchBuff (characterName) {
 
         // 角色搜尋
         const characters = []
-        for (const row of rows) {
+        for (const [index, row] of rows.entries()) {
             // if (row._rawData[0]) characters.push(row._rawData[0])
             if (row._rawData[0] && row._rawData[0] === characterName) {
-                console.log(row)
+                console.log(row, `row${index}`)
             }
         }
         // rows.forEach((row, i) => {
