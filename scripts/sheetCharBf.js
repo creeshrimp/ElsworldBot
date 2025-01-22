@@ -15,7 +15,8 @@ async function searchBuff(characterName) {
         for (const [index, row] of rows.entries()) {
             // if (row._rawData[0]) characters.push(row._rawData[0])
             if (row._rawData[0] && row._rawData[0] === characterName) {
-                console.log(row, `row${index}`)
+                // console.log(row, `row${index}`)
+                console.log(row._rawData, `row${index}`)
             }
         }
         // rows.forEach((row, i) => {
